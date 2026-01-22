@@ -8,7 +8,7 @@ export default function CodeArea() {
   const [activeLang, setActiveLang] = useState(languages[0]);
   const [code, setCode] = useState(languages[0].helloWorld);
   return (
-    <div className="flex w-full lg:w-1/2 bg-zinc-900 h-full">
+    <div className="flex w-full lg:w-1/2 bg-zinc-900 h-full border-r-4">
       <div className="bg-zinc-800 p-2 overflow-auto w-24 sm:w-12 md:w-20 lg:w-20 shrink-0 pt-1">
         <Button
           file={file}

@@ -26,7 +26,7 @@ function NavBar() {
               About
             </span>
           </div>
-          <div className="flex gap-1 border border-black ml-2 md:ml-4">
+          <div className="flex gap-1 border border-black rounded-xl ml-2 md:ml-4">
             <input
               className="flex outline-0 p-1 text-gray-200 w-20 sm:w-32 md:w-auto"
               type="text"
