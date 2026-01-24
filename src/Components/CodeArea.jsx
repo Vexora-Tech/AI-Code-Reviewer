@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
 import Button from "./Button";
-import { languages } from "./Languages";
+import { languages } from "./constants/Languages";
 
-export default function CodeArea() {
+export default function CodeArea({ code, setCode, handleResponse }) {
   const [file, setFile] = useState("main.js");
   const [activeLang, setActiveLang] = useState(languages[0]);
-  const [code, setCode] = useState(languages[0].helloWorld);
+
   return (
     <div className="flex w-full lg:w-1/2 bg-zinc-900 h-full border-r-4">
       <div className="bg-[#1e1e1e] p-2 overflow-auto w-24 sm:w-12 md:w-20 lg:w-20 shrink-0 pt-1">
@@ -30,7 +30,10 @@ export default function CodeArea() {
               {file}
             </span>
           </div>
-          <button className="bg-linear-to-r from-zinc-400 to-zinc-500 hover:from-zinc-500 hover:to-zinc-600 m-2 px-4 sm:px-6 py-2 sm:py-2.5 border border-zinc-700 rounded-lg font-semibold mr-2 sm:mr-4 text-sm sm:text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 shrink-0">
+          <button
+            className="bg-linear-to-r from-zinc-400 to-zinc-500 hover:from-zinc-500 hover:to-zinc-600 m-2 px-4 sm:px-6 py-2 sm:py-2.5 border border-zinc-700 rounded-lg font-semibold mr-2 sm:mr-4 text-sm sm:text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 shrink-0"
+            onClick={handleResponse}
+          >
             Review
           </button>
         </div>

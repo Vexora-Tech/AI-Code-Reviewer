@@ -1,4 +1,4 @@
-import { languages } from "./Languages";
+import { languages } from "./constants/Languages";
 
 export default function Button({
   file,
