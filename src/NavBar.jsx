@@ -2,7 +2,7 @@ function NavBar() {
   return (
     <>
       <nav>
-        <div className="bg-gray-500 h-14 text-gray-50 flex items-center p-2 justify-between">
+        <div className="bg-zinc-500 h-14 text-gray-50 flex items-center p-2 justify-between">
           <div className="flex flex-row items-center">
             <i>
               <img
@@ -11,7 +11,7 @@ function NavBar() {
                 alt=""
               />
             </i>
-            <span className="text-lg sm:text-xl md:text-2xl text-gray-900 cursor-pointer font-semibold font-stretch-100%">
+            <span className="text-lg sm:text-xl md:text-2xl text-gray-900 font-semibold font-stretch-100% cursor-default">
               Code Mate
             </span>
           </div>
@@ -32,7 +32,7 @@ function NavBar() {
               type="text"
               placeholder="Search..."
             />
-            <button className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 p-1">
+            <button className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 p-1 cursor-pointer">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>

@@ -22,23 +22,19 @@ export default function Button({
             onClick={() => handleLanguageClick(lang)}
             data-active={activeLang.key === lang.key}
             className="
-      flex flex-col items-center justify-center
-      gap-1
-      rounded-md
-      bg-zinc-900
-      py-2
-      border border-[#1e1e1e]
-      text-zinc-300
-      transition-colors
-       hover:text-white
-      focus:outline-none 
-
-      data-[active=true]:bg-[#1e1e1e]
-      
-      data-[active=true]:text-white
-
-      duration-300 ease-in-out hover:-translate-y-1 hover:scale-110
-    "
+          flex flex-col items-center justify-center
+          gap-1
+          rounded-md
+        bg-zinc-900
+          py-2
+          border border-[#1e1e1e]
+         text-zinc-300
+          transition-colors
+         hover:text-white
+          focus:outline-none 
+           data-[active=true]:bg-[#1e1e1e]
+           data-[active=true]:text-white
+          duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
             aria-label={`${lang.name} file`}
           >
             <img
