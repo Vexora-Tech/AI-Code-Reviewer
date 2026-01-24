@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function InputArea() {
+export default function OutputArea() {
   return (
     <div className="w-full lg:w-1/2 bg-zinc-800">
       <div className="flex justify-start items-center border-b border-zinc-600 shadow-lg shrink-0">
