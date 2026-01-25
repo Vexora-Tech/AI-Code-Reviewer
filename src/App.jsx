@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { languages } from "./Components/constants/Languages";
 import { URL, API_KEY } from "./Components/constants/constants";
 
-
 export default function App() {
   const [code, setCode] = useState(languages[0].helloWorld);
   const [activeLang, setActiveLang] = useState(languages[0]);
@@ -13,6 +12,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
 
   const handleResponse = async () => {
+    setResponse("");
     setLoading(true);
     const res = await fetch(URL, {
       method: "POST",

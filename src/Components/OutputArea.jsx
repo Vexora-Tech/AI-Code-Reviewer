@@ -10,7 +10,7 @@ export default function OutputArea({ response, loading }) {
           Response
         </h1>
       </div>
-      <div className="w-full text-zinc-200 p-4 overflow-scroll">
+      <div className="w-full text-zinc-200 p-4 pl-8 overflow-scroll">
         {loading ? (
           <div className="flex justify-center items-center w-full h-160">
             <PuffLoader

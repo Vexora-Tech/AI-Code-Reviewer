@@ -1,2 +1,30 @@
 @import "tailwindcss";
 
+
+p{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  font-size: 16px;
+  color: rgb(208, 207, 207);
+}
+
+p > strong {
+    font-size: 24px;
+    color: rgb(246, 244, 244);
+    
+
+}
+
+code{
+    font-size: 18px;
+}
+
+ul li{
+  color: rgb(208, 207, 207);
+  list-style: disc;
+  padding-top: 10px;
+}
+
+li strong{
+  color: rgb(233, 233, 233);
+}
