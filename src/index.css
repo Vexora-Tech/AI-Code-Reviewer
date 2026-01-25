@@ -28,3 +28,10 @@ ul li{
 li strong{
   color: rgb(233, 233, 233);
 }
+
+pre{
+  background: #121212;
+  padding: 15px;
+  overflow: scroll;
+  border-radius: 10px;
+}
