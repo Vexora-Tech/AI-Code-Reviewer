@@ -3,9 +3,14 @@ import Editor from "@monaco-editor/react";
 import Button from "./Button";
 import { languages } from "./constants/Languages";
 
-export default function CodeArea({ code, setCode, handleResponse }) {
+export default function CodeArea({
+  code,
+  setCode,
+  handleResponse,
+  activeLang,
+  setActiveLang,
+}) {
   const [file, setFile] = useState("main.js");
-  const [activeLang, setActiveLang] = useState(languages[0]);
 
   return (
     <div className="flex w-full lg:w-1/2 bg-zinc-900 h-full border-r-4">

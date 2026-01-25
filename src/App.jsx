@@ -7,6 +7,8 @@ import { URL, API_KEY } from "./Components/constants/constants";
 
 export default function App() {
   const [code, setCode] = useState(languages[0].helloWorld);
+  const [activeLang, setActiveLang] = useState(languages[0]);
+  const [response, setResponse] = useState("");
 
   const handleResponse = async () => {
     const res = await fetch(URL, {
@@ -20,14 +22,28 @@ export default function App() {
         messages: [
           {
             role: "user",
-            content: "hello",
+            content: `You are an expert-level software developer, skilled in writing efficient, clean, and advanced code.
+I'm sharing a piece of code written in ${activeLang.key}.
+Your job is to deeply review this code and provide the following:
+
+1️⃣ A quality rating: Better, Good, Normal, or Bad.
+2️⃣ Detailed suggestions for improvement, including best practices and advanced alternatives.
+3️⃣ A clear explanation of what the code does, step by step.
+4️⃣ A list of any potential bugs or logical errors, if found.
+5️⃣ Identification of syntax errors or runtime errors, if present.
+6️⃣ Solutions and recommendations on how to fix each identified issue.
+
+Analyze it like a senior developer reviewing a pull request.
+
+Code: ${code}`,
           },
         ],
       }),
     });
     const data = await res.json();
-    const Response = data.choices[0].message.content;
-    console.log(Response);
+    const responseData = data.choices[0].message.content;
+    setResponse(responseData);
+    console.log(responseData);
   };
   return (
     <>
@@ -37,8 +53,10 @@ export default function App() {
           code={code}
           setCode={setCode}
           handleResponse={handleResponse}
+          activeLang={activeLang}
+          setActiveLang={setActiveLang}
         />
-        <OutputArea />
+        <OutputArea response={response} />
       </div>
     </>
   );
