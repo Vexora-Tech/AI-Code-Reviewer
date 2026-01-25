@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
 import Button from "./Button";
-import { languages } from "./constants/Languages";
 
 export default function CodeArea({
   code,
@@ -37,7 +36,15 @@ export default function CodeArea({
           </div>
           <button
             className="bg-linear-to-r from-zinc-400 to-zinc-500 hover:from-zinc-500 hover:to-zinc-600 m-2 px-4 sm:px-6 py-2 sm:py-2.5 border border-zinc-700 rounded-lg font-semibold mr-2 sm:mr-4 text-sm sm:text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105 shrink-0"
-            onClick={handleResponse}
+            onClick={() => {
+              if (code === activeLang.helloWorld) {
+                alert(
+                  "Please write some code - you know this will return Hello, World!",
+                );
+              } else {
+                handleResponse();
+              }
+            }}
           >
             Review
           </button>

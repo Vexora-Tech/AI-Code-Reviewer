@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from "react-markdown";
 
 export default function OutputArea({ response }) {
   return (
@@ -9,7 +10,7 @@ export default function OutputArea({ response }) {
         </h1>
       </div>
       <div className="w-full h-screen text-zinc-200 p-4 overflow-scroll">
-        {response}
+        <Markdown>{response}</Markdown>
       </div>
     </div>
   );

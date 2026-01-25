@@ -9,8 +9,10 @@ export default function App() {
   const [code, setCode] = useState(languages[0].helloWorld);
   const [activeLang, setActiveLang] = useState(languages[0]);
   const [response, setResponse] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleResponse = async () => {
+    setLoading(true);
     const res = await fetch(URL, {
       method: "POST",
       headers: {
@@ -44,6 +46,7 @@ Code: ${code}`,
     const responseData = data.choices[0].message.content;
     setResponse(responseData);
     console.log(responseData);
+    setLoading(false);
   };
   return (
     <>
