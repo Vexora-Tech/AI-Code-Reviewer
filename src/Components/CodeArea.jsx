@@ -42,7 +42,7 @@ export default function CodeArea({
                   "Please write some code - you know this will return Hello, World!",
                 );
               } else {
-                handleResponse();
+                handleResponse()
               }
             }}
           >

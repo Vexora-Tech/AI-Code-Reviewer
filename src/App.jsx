@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { languages } from "./Components/constants/Languages";
 import { URL, API_KEY } from "./Components/constants/constants";
 
+
 export default function App() {
   const [code, setCode] = useState(languages[0].helloWorld);
   const [activeLang, setActiveLang] = useState(languages[0]);
@@ -59,7 +60,7 @@ Code: ${code}`,
           activeLang={activeLang}
           setActiveLang={setActiveLang}
         />
-        <OutputArea response={response} />
+        <OutputArea response={response} loading={loading} />
       </div>
     </>
   );
